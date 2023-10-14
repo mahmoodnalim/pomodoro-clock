@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Pomodoro Clock</title>
+</head>
+<body>
+	<h1>Pomodoro Clock</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<legend>Set Session Time</legend>
+				<span id="btn" class="btn btn-opt">+</span>
+				<span id="sesTime" class="set-time">25</span>
+				<span class="btn btn-opt">-</span>
+			</div>
+			<div class="col">
+				<legend>Set Interval Time</legend>
+				<span class="btn btn-opt">+</span>
+				<span id="brkTime" class="set-time">05</span>
+				<span class="btn btn-opt">-</span>
+			</div>
+		</div>
+		<div id="prog" class="clock">
+			<div class="prog">
+				<div class="time">
+					<span id="min">00</span>
+					:
+					<span id="sec">00</span>
+				</div>	
+			</div>
+		</div>
+		<div class="control">
+			<button id="go" class="btn btn-cont">Go</button>
+			<button id="pause" class="btn btn-cont" style="display: none;">Pause</button>
+			<button id="reset" class="btn btn-cont">Reset</button>
+		</div>
+      <footer>
+    &copy; Design and code by Rizan Musthafa
+  </footer>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

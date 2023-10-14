@@ -1,0 +1,163 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+body {
+	background-color: #eee;
+}
+
+h1 {
+	text-align: center;
+	padding: 20px 0;
+	font-size: 60px;
+	font-family: monospace;
+	color: #123456;
+}
+
+.container {
+	background-color: #123456;
+	color: #f1f1f1;
+	width: 80%;
+	margin: 10px auto;
+	border-radius: 20px;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	text-align: center;
+	padding: 20px;
+}
+
+.col>legend {
+	padding: 10px;
+	font-size: 20px;
+}
+
+.btn {
+	display: inline-block;
+	min-height: 30px;
+	min-width: 80px;
+	padding: 5px;
+	text-align: center;
+	background-color: #d1d1d1;
+	color: #222;
+	border: 3px solid #a1a1a1;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #b1b1b1;
+	color: #fff;
+}
+
+.btn:active {
+	background-color: #919191;
+}
+
+.set-time {
+	text-align: center;
+	padding: 5px 20px;
+	color: #fff;
+	font-size: 20px;
+	background-color: #515151;
+	border: 1px #fff solid;
+}
+
+.clock {
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	margin: 50px auto;
+	text-align: center;
+	background-color: #5599aa;
+	border-radius: 100px;
+	position: relative;
+
+}
+
+.time {
+	z-index: 1000;
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	background-color: #fff;
+	color: #222;
+	border-radius: 80px;
+	padding: 80px 20px;
+	font-size: 70px;
+}
+
+.control {
+	text-align: center;
+}
+
+.btn-cont {
+	margin: 20px auto;
+	min-width: 120px;
+	min-height: 40px;
+}
+
+.brk-prog {
+	background-color: orange;
+}
+
+.ses-prog {
+	background-color: #00ff00;
+}
+
+.active:after {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	width: 170px;
+	height: 170px;
+	background-color: #f1f1f1;
+	border-radius: 50%;
+	opacity: 0.6;
+	transform-origin: 50px 150px;
+	animation: time-loading 1s infinite linear;
+}
+
+footer {
+  background-color: #123444;
+  text-align: center;
+  margin-top: 20px;
+  padding: 50px 0;
+  color: #eee;
+}
+
+@media only screen and (max-width: 640px) {
+	.container {
+		width: 100%;
+	}
+	.row{
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.clock {
+		width: 100%;
+	}
+	.time {
+		width: 80%;
+		font-size: 2rem;
+	}
+}
+
+@keyframes time-loading {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
